@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 
 const ButtonExample = () => {
-    const [clicked , setClicked] = useState(false)
+  const [clicked , setclicked] = useState(false)
   return (
     <div>
-        {
-            clicked ? (<p>You clicked th ebutton</p>) 
-                    : (<p>click the button</p>)
-        }
-        <button onClick={() => setClicked(!clicked)}>
-            {clicked ? "Reset" : "click Me"}
-        </button>
+    {
+      clicked ? <h1> you have clicked the button</h1>
+              : <h1>Click the button below</h1>
+    }
+    <button onClick={() => setclicked(!clicked)} >{clicked ? "Reset" : "Click me"}</button>
     </div>
   )
 }
