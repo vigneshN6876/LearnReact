@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 
 const simpleCart = () => {
     const [items , setItems] = useState([])
@@ -7,8 +7,10 @@ const simpleCart = () => {
         if(inputValue === "")return
         setItems([...items , inputValue])
         setInputValue("")
-        console.log(items)
     }
+    useEffect(() => {
+        console.log(items);
+    },[items])
   return (
     <div>
         <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
