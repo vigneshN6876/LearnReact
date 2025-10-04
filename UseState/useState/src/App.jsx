@@ -3,6 +3,7 @@ import { useState } from 'react'
 import HandlingInput from './Components/HandlingInput'
 import HandlingButton from './Components/HandlingButton'
 import ButtonExample from './Components/ButtonExample'
+import SimpleCart from './Components/simpleCart'
 const App = () => {
   const [count , setCount] = useState(0)
   const counter = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <HandlingInput />
       <HandlingButton />
       <ButtonExample />
+      <SimpleCart />
     </div>
   )
 }
